@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 220px;
+  padding: 60px 20px;
+  gap: 16px;
+
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.72), rgba(17, 17, 17, 0.72)),
+    url('../assets/img/Header.jpg') no-repeat center;
+
+  background-size: cover;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 2.6rem;
+  margin: 0 0 10px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #d4d4d4;
+  margin: 0;
+  max-width: 600px;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .header {
+    height: 220px;
+    padding: 32px 16px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .header p {
+    font-size: 1rem;
+    max-width: 320px;
+  }
+}
