@@ -1,6 +1,7 @@
 # 🍕 Pizzería Mamma Mia
 
 Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, enfocada en la construcción de componentes reutilizables, renderizado dinámico de datos y diseño responsive.
+
 ---
 
 ## 🚀 Demo
