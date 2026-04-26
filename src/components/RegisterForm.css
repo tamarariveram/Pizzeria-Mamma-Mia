@@ -1,0 +1,77 @@
+.registerForm {
+  max-width: 420px;
+  margin: 32px auto;
+  padding: 32px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+
+.registerForm label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.registerForm input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-family: var(--sans);
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registerForm input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.registerForm button {
+  margin-top: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.05s ease;
+}
+
+.registerForm button:hover {
+  opacity: 0.9;
+}
+
+.registerForm button:active {
+  transform: translateY(1px);
+}
+
+.registerForm br {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .registerForm {
+    margin: 20px 16px;
+    padding: 24px;
+  }
+}
