@@ -14,8 +14,6 @@ function CardPizza({ name, price, ingredients, img, desc }) {
             <li key={index}> {ing}</li>
           ))}
         </ul>
-        <p>{desc}</p>
-
         <p className="card-pizza-price">Precio: ${price.toLocaleString()}</p>
 
         <div className="card-pizza-actions">

@@ -46,5 +46,3 @@ src/
 │── assets/
 │── App.jsx
 │── main.jsx
-
-Actualizado desde mi nueva Mac 🔥
