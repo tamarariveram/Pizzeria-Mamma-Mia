@@ -1,6 +1,6 @@
 import './CardPizza.css';
 
-function CardPizza({ name, price, ingredients, img }) {
+function CardPizza({ name, price, ingredients, img, desc }) {
   return (
     <div className="card-pizza">
       <img src={img} alt={name} />
@@ -14,6 +14,7 @@ function CardPizza({ name, price, ingredients, img }) {
             <li key={index}> {ing}</li>
           ))}
         </ul>
+        <p>{desc}</p>
 
         <p className="card-pizza-price">Precio: ${price.toLocaleString()}</p>
 
