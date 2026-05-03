@@ -10,10 +10,10 @@ function App() {
     <>
       <Navbar />
       {/* <Home /> */}
-      <Cart /> 
       {/* <LoginForm /> */}
       <br />
       {/* <RegisterForm /> */}
+      <Cart /> 
       <Footer />
     </>
   );
