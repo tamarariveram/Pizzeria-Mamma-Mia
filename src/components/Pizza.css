@@ -1,0 +1,90 @@
+/* ===== PIZZA ===== */
+.pizza {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== PIZZA IMAGE ===== */
+.pizza-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== PIZZA INFO ===== */
+.pizza-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.pizza-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== PIZZA INGREDIENTS ===== */
+.pizza-ingredients-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.pizza-ingredients {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.pizza-ingredients li {
+  background-color: #f9f1f1;
+  color: #e63946;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* ===== PIZZA PRICE ===== */
+.pizza-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+
+.pizza-price span {
+  color: #e63946;
+}
+
+/* ===== PIZZA BUTTON ===== */
+.pizza-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pizza-btn:hover {
+  background-color: #c1121f;
+}

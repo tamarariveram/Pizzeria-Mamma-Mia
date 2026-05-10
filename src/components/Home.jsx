@@ -1,9 +1,22 @@
 import Header from "./Header.jsx";
 import CardPizza from "./CardPizza.jsx";
 import "./Home.css";
-import { pizzas } from "../data/pizzas.js";
+import { useEffect, useState } from "react";
+// import { pizzas } from "../data/pizzas.js";
 
 function Home() {
+  const [pizzas, setPizzas] = useState([]);
+
+  useEffect(() => {
+    const getPizzas = async () => {
+      const response = await fetch("http://localhost:5000/api/pizzas");
+      const data = await response.json();
+
+      setPizzas(data);
+    };
+    getPizzas();
+  }, []);
+
   return (
     <>
       <Header />
