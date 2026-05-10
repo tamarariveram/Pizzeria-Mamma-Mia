@@ -16,9 +16,11 @@ Puedes ver el proyecto funcionando aquí:
 
 - 🧩 Componentes reutilizables en React
 - 🎨 Diseño responsive (mobile-first)
-- 🧠 Render dinámico de datos con props
-- 🛒 Simulación de carrito (total)
-- 📦 Estructura modular y escalable
+- 🧠 Render dinámico de datos con props y estado
+- 🛒 Carrito de compras con control de cantidad y total
+- 🍕 Vista de detalle de pizza con consumo de API REST
+- 🔐 Formularios de Login y Registro
+- 📦 Estructura modular y escalable (CSS por componente)
 - 🎯 UI moderna con enfoque en experiencia de usuario
 
 ---
@@ -36,13 +38,44 @@ Puedes ver el proyecto funcionando aquí:
 ## 📁 Estructura del proyecto
 ```bash
 src/
-│── components/
-│ ├── Navbar.jsx
-│ ├── Header.jsx
-│ ├── Home.jsx
-│ ├── CardPizza.jsx
-│ └── Footer.jsx
+├── components/
+│   ├── Navbar.jsx / Navbar.css
+│   ├── Header.jsx / Header.css
+│   ├── Home.jsx / Home.css
+│   ├── CardPizza.jsx / CardPizza.css
+│   ├── Cart.jsx / Cart.css
+│   ├── Pizza.jsx / Pizza.css
+│   ├── LoginForm.jsx / LoginForm.css
+│   ├── RegisterForm.jsx / RegisterForm.css
+│   └── Footer.jsx / Footer.css
 │
-│── assets/
-│── App.jsx
-│── main.jsx
+├── data/
+├── assets/
+├── App.jsx / App.css
+├── index.css
+└── main.jsx
+```
+
+## ⚙️ Instalación y uso local
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tamarariveram/Pizzeria-Mamma-Mia.git
+
+# Ingresar al proyecto
+cd Pizzeria-Mamma-Mia/Frontend
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+```
+
+> Asegúrate de tener el backend corriendo en `http://localhost:5000` para que el componente `Pizza` pueda consumir la API.
+
+---
+
+## 👩‍💻 Autora
+
+Tamara Rivera — [@tamarariveram](https://github.com/tamarariveram)
