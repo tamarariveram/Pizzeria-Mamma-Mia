@@ -88,3 +88,17 @@
 .pizza-btn:hover {
   background-color: #c1121f;
 }
+
+/* ===== LOADING ===== */
+.pizza-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  padding: 4rem 0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

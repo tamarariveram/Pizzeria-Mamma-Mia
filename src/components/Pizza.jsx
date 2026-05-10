@@ -16,7 +16,7 @@ function Pizza() {
 
 
 if (!pizza) {
-  return <p>Cargando pizza...</p>;
+  return <p className="pizza-loading">Cargando pizza...</p>;
 }
 
   return (
