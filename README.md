@@ -41,13 +41,16 @@ src/
 ├── components/
 │   ├── Navbar.jsx / Navbar.css
 │   ├── Header.jsx / Header.css
+│   └── Footer.jsx / Footer.css
+│
+├── views/
 │   ├── Home.jsx / Home.css
-│   ├── CardPizza.jsx / CardPizza.css
 │   ├── Cart.jsx / Cart.css
 │   ├── Pizza.jsx / Pizza.css
 │   ├── LoginForm.jsx / LoginForm.css
 │   ├── RegisterForm.jsx / RegisterForm.css
-│   └── Footer.jsx / Footer.css
+│   ├── Profile.jsx / Profile.css
+│   └── NotFound.jsx / NotFound.css
 │
 ├── data/
 ├── assets/

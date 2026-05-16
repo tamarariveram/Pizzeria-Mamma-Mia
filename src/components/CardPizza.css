@@ -88,6 +88,21 @@
   letter-spacing: 0.2px;
 }
 
+.card-pizza-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #9f2d2d;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background-color 0.25s;
+}
+
+.card-pizza-btn:hover {
+  background-color: #7f1d1d;
+}
+
 .card-pizza-actions button:first-child {
   background-color: #f0f0ef;
   color: #1f1f1f;

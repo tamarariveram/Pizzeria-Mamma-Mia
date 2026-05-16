@@ -1,4 +1,5 @@
 import './Navbar.css';
+import { Link } from "react-router-dom";
 
 function Navbar() {
     const total = 25000;
@@ -6,24 +7,26 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <button>🍕 Home</button>
+      <Link to="/" className="navbar-home">🍕 Home</Link>
 
-            <div className="navbar-buttons">
-                {token ? (
-                    <>
-                        <button>🔒 Profile</button>
-                        <button>🔒 Logout</button>
-                    </>
-                ) : (
-                    <>
-                        <button>🔐 Login</button>
-                        <button>🔐 Register</button>
-                    </>
-                )}
-            </div>
+      <div className="navbar-buttons">
+        {token ? (
+          <>
+            <Link to="/profile" className="navbar-btn">🔐 Profile</Link>
+            <button className="navbar-btn">🔐 Logout</button>
+          </>
+        ) : (
+          <>
+            <Link to="/login" className="navbar-btn">🔐 Login</Link>
+            <Link to="/register" className="navbar-btn">🔐 Register</Link>
+          </>
+        )}
+      </div>
 
-            <button className="navbar-cart">🛒 Total: ${total.toLocaleString()}</button>
-        </nav>
+      <Link to="/cart" className="navbar-cart">
+        🛒 Total: ${total.toLocaleString()}
+      </Link>
+    </nav>
     )
 }
 

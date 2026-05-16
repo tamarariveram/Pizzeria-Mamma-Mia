@@ -1,4 +1,5 @@
 import './CardPizza.css';
+import { Link } from "react-router-dom";
 
 function CardPizza({ name, price, ingredients, img, desc }) {
   return (
@@ -17,7 +18,7 @@ function CardPizza({ name, price, ingredients, img, desc }) {
         <p className="card-pizza-price">Precio: ${price.toLocaleString()}</p>
 
         <div className="card-pizza-actions">
-          <button>Ver más</button>
+          <Link to="/pizza/p001" className="card-pizza-btn">Ver más</Link>
           <button>Añadir</button>
         </div>
       </div>
