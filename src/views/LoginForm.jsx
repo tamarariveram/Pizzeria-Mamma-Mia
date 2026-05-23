@@ -8,10 +8,10 @@ export default function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(password.length < 6) {
-        alert("La contraseña debe tener al menos 6 caracteres");
-        return;
-    }  
+    if (password.length < 6) {
+      alert("La contraseña debe tener al menos 6 caracteres");
+      return;
+    }
     alert("Sesión iniciada con éxito");
     setEmail("");
     setPassword("");

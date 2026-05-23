@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext";
 import "./Cart.css";
 
 export default function Cart() {
- const { cart, increaseCount, decreaseCount, total } = useContext(CartContext);
+  const { cart, increaseCount, decreaseCount, total } = useContext(CartContext);
 
   return (
     <div className="cart">

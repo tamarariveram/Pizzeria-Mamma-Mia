@@ -24,15 +24,15 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<LoginForm />} />
               <Route path="/register" element={<RegisterForm />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/catalogo" element={<Catalogo />} />
-            <Route path="/pizza/:id" element={<Pizza />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </CartProvider>
-      </PizzaProvider>
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/catalogo" element={<Catalogo />} />
+              <Route path="/pizza/:id" element={<Pizza />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/404" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </CartProvider>
+        </PizzaProvider>
       </BrowserRouter>
     </>
   );

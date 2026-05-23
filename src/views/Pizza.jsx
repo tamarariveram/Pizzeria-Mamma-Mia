@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Pizza.css";
-import { useContext } from 'react';
-import { CartContext } from '../context/CartContext.jsx';
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext.jsx";
 import { useParams } from "react-router-dom";
 import { PizzaContext } from "../context/PizzaContext.jsx";
 
@@ -12,10 +12,9 @@ function Pizza() {
 
   const pizza = pizzas.find((p) => p.id === id);
 
-
-if (!pizza) {
-  return <p className="pizza-loading">Cargando pizza...</p>;
-}
+  if (!pizza) {
+    return <p className="pizza-loading">Cargando pizza...</p>;
+  }
 
   return (
     <div className="pizza">
@@ -33,9 +32,16 @@ if (!pizza) {
         ))}
       </ul>
 
-      <h3 className="pizza-price">Precio: ${new Intl.NumberFormat("es-CL").format(pizza.price)}</h3>
+      <h3 className="pizza-price">
+        Precio: ${new Intl.NumberFormat("es-CL").format(pizza.price)}
+      </h3>
 
-      <button className="pizza-btn" onClick={() => addToCart({ name: pizza.name, price: pizza.price, img: pizza.img })}>
+      <button
+        className="pizza-btn"
+        onClick={() =>
+          addToCart({ name: pizza.name, price: pizza.price, img: pizza.img })
+        }
+      >
         Añadir al carrito
       </button>
     </div>

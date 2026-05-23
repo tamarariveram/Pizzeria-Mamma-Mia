@@ -28,16 +28,21 @@ const CartProvider = ({ children }) => {
   };
 
   const decreaseCount = (id) => {
-    const updatedCart = cart.map((item) => 
-      item.id === id ? { ...item, count: item.count - 1 } : item
+    const updatedCart = cart.map((item) =>
+      item.id === id ? { ...item, count: item.count - 1 } : item,
     );
     setCart(updatedCart.filter((item) => item.count > 0));
   };
 
-  const total = cart.reduce((total, item) => total + item.price * item.count, 0);
+  const total = cart.reduce(
+    (total, item) => total + item.price * item.count,
+    0,
+  );
 
   return (
-    <CartContext.Provider value={{ cart, setCart, addToCart, increaseCount, decreaseCount, total }}>
+    <CartContext.Provider
+      value={{ cart, setCart, addToCart, increaseCount, decreaseCount, total }}
+    >
       {children}
     </CartContext.Provider>
   );

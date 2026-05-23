@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function Navbar() {
-
   const { total } = useContext(CartContext);
   const token = true;
 
@@ -14,7 +13,9 @@ function Navbar() {
         🍕 Home
       </Link>
 
-<Link to="/catalogo" className="navbar-btn">🍕 Catálogo</Link>
+      <Link to="/catalogo" className="navbar-btn">
+        🍕 Catálogo
+      </Link>
 
       <div className="navbar-buttons">
         {token ? (
