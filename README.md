@@ -1,6 +1,6 @@
 # 🍕 Pizzería Mamma Mia
 
-Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, enfocada en la construcción de componentes reutilizables, renderizado dinámico de datos y diseño responsive.
+Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, enfocada en la construcción de componentes reutilizables, manejo de estado global con Context API y diseño responsive.
 
 ---
 
@@ -17,9 +17,13 @@ Puedes ver el proyecto funcionando aquí:
 - 🧩 Componentes reutilizables en React
 - 🎨 Diseño responsive (mobile-first)
 - 🧠 Render dinámico de datos con props y estado
-- 🛒 Carrito de compras con control de cantidad y total
+- 🛒 Carrito de compras con Context API (agregar, aumentar, disminuir y eliminar productos)
+- 💰 Total del carrito sincronizado en tiempo real con el Navbar
 - 🍕 Vista de detalle de pizza con consumo de API REST
+- 🗺️ Enrutamiento con React Router DOM
 - 🔐 Formularios de Login y Registro
+- 👤 Página de perfil de usuario
+- ❌ Página 404 personalizada
 - 📦 Estructura modular y escalable (CSS por componente)
 - 🎯 UI moderna con enfoque en experiencia de usuario
 
@@ -36,6 +40,7 @@ Puedes ver el proyecto funcionando aquí:
 ---
 
 ## 📁 Estructura del proyecto
+
 ```bash
 src/
 ├── components/
@@ -45,6 +50,7 @@ src/
 │
 ├── views/
 │   ├── Home.jsx / Home.css
+│   ├── Catalogo.jsx / Catalogo.css
 │   ├── Cart.jsx / Cart.css
 │   ├── Pizza.jsx / Pizza.css
 │   ├── LoginForm.jsx / LoginForm.css
@@ -52,12 +58,16 @@ src/
 │   ├── Profile.jsx / Profile.css
 │   └── NotFound.jsx / NotFound.css
 │
-├── data/
+├── context/
+│   └── CartContext.jsx
+│
 ├── assets/
 ├── App.jsx / App.css
 ├── index.css
 └── main.jsx
 ```
+
+---
 
 ## ⚙️ Instalación y uso local
 
@@ -74,8 +84,6 @@ npm install
 # Iniciar servidor de desarrollo
 npm run dev
 ```
-
-> Asegúrate de tener el backend corriendo en `http://localhost:5000` para que el componente `Pizza` pueda consumir la API.
 
 ---
 

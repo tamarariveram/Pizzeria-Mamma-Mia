@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import "./Pizza.css";
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext.jsx';
+import { useParams } from "react-router-dom";
 
 function Pizza() {
   const [pizza, setPizza] = useState(null);
+  const { id } = useParams();
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     const getPizza = async () => {
-      const response = await fetch("http://localhost:5000/api/pizzas/p001");
+      const response = await fetch(`http://localhost:5000/api/pizzas/${id}`);
       const data = await response.json();
 
       setPizza(data);
@@ -37,7 +42,9 @@ if (!pizza) {
 
       <h3 className="pizza-price">Precio: ${new Intl.NumberFormat("es-CL").format(pizza.price)}</h3>
 
-      <button className="pizza-btn">Añadir al carrito</button>
+      <button className="pizza-btn" onClick={() => addToCart({ name: pizza.name, price: pizza.price, img: pizza.img })}>
+        Añadir al carrito
+      </button>
     </div>
   );
 }

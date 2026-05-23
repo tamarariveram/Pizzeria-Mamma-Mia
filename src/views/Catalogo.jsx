@@ -1,27 +1,23 @@
-import Header from "../components/Header.jsx";
-import CardPizza from "../components/CardPizza.jsx";
-import "./Home.css";
 import { useEffect, useState } from "react";
-// import { pizzas } from "../data/pizzas.js";
+import CardPizza from "../components/CardPizza";
+import "./Catalogo.css";
 
-function Home() {
+function Catalogo() {
   const [pizzas, setPizzas] = useState([]);
 
   useEffect(() => {
     const getPizzas = async () => {
       const response = await fetch("http://localhost:5000/api/pizzas");
       const data = await response.json();
-
       setPizzas(data);
     };
     getPizzas();
   }, []);
 
   return (
-    <>
-      <Header />
-
-      <div className="home-cards">
+    <div className="catalogo">
+      <h2 className="catalogo-title">🍕 Nuestro Catálogo</h2>
+      <div className="catalogo-cards">
         {pizzas.map((pizza) => (
           <CardPizza
             key={pizza.id}
@@ -33,8 +29,8 @@ function Home() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
-export default Home;
+export default Catalogo;

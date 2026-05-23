@@ -1,8 +1,11 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 function Navbar() {
-  const total = 25000;
+
+  const { total } = useContext(CartContext);
   const token = true;
 
   return (
@@ -10,6 +13,8 @@ function Navbar() {
       <Link to="/" className="navbar-home">
         🍕 Home
       </Link>
+
+<Link to="/catalogo" className="navbar-btn">🍕 Catálogo</Link>
 
       <div className="navbar-buttons">
         {token ? (
