@@ -60,6 +60,7 @@ src/
 │
 ├── context/
 │   └── CartContext.jsx
+│   └── PizzaContext.jsx 
 │
 ├── assets/
 ├── App.jsx / App.css

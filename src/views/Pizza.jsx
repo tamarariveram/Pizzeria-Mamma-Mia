@@ -3,21 +3,14 @@ import "./Pizza.css";
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext.jsx';
 import { useParams } from "react-router-dom";
+import { PizzaContext } from "../context/PizzaContext.jsx";
 
 function Pizza() {
-  const [pizza, setPizza] = useState(null);
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
+  const { pizzas } = useContext(PizzaContext);
 
-  useEffect(() => {
-    const getPizza = async () => {
-      const response = await fetch(`http://localhost:5000/api/pizzas/${id}`);
-      const data = await response.json();
-
-      setPizza(data);
-    };
-    getPizza();
-  }, []);
+  const pizza = pizzas.find((p) => p.id === id);
 
 
 if (!pizza) {

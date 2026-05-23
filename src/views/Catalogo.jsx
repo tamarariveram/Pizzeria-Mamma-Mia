@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import CardPizza from "../components/CardPizza";
 import "./Catalogo.css";
+import { PizzaContext } from "../context/PizzaContext.jsx";
 
 function Catalogo() {
-  const [pizzas, setPizzas] = useState([]);
-
-  useEffect(() => {
-    const getPizzas = async () => {
-      const response = await fetch("http://localhost:5000/api/pizzas");
-      const data = await response.json();
-      setPizzas(data);
-    };
-    getPizzas();
-  }, []);
+  const { pizzas } = useContext(PizzaContext);
 
   return (
     <div className="catalogo">

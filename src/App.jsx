@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from "./context/CartContext.jsx";
+import PizzaProvider from "./context/PizzaContext.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -16,12 +17,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <CartProvider>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<LoginForm />} />
-            <Route path="/register" element={<RegisterForm />} />
+        <PizzaProvider>
+          <CartProvider>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<LoginForm />} />
+              <Route path="/register" element={<RegisterForm />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/catalogo" element={<Catalogo />} />
             <Route path="/pizza/:id" element={<Pizza />} />
@@ -30,6 +32,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </CartProvider>
+      </PizzaProvider>
       </BrowserRouter>
     </>
   );
