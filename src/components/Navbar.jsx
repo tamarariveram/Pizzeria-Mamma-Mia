@@ -2,17 +2,17 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { UserContext } from "../context/UserContext";
 
 function Navbar() {
   const { total } = useContext(CartContext);
-  const token = true;
+  const { token, logout } = useContext(UserContext); // 👈 ambos aquí
 
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-home">
         🍕 Home
       </Link>
-
       <Link to="/catalogo" className="navbar-btn">
         🍕 Catálogo
       </Link>
@@ -23,7 +23,9 @@ function Navbar() {
             <Link to="/profile" className="navbar-btn">
               👤 Profile
             </Link>
-            <button className="navbar-btn">🔐 Logout</button>
+            <button className="navbar-btn" onClick={logout}>
+              🔐 Logout
+            </button>
           </>
         ) : (
           <>

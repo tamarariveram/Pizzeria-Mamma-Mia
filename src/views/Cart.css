@@ -93,3 +93,27 @@
   font-size: 1rem;
   padding: 2rem 0;
 }
+
+.cart-btn-pagar {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-btn-pagar:hover:not(:disabled) {
+  background-color: #c1121f;
+}
+
+.cart-btn-pagar:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

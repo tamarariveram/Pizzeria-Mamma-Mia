@@ -1,6 +1,6 @@
 # 🍕 Pizzería Mamma Mia
 
-Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, enfocada en la construcción de componentes reutilizables, manejo de estado global con Context API y diseño responsive.
+Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, enfocada en la construcción de componentes reutilizables, manejo de estado global con Context API, autenticación simulada y diseño responsive.
 
 ---
 
@@ -19,10 +19,11 @@ Puedes ver el proyecto funcionando aquí:
 - 🧠 Render dinámico de datos con props y estado
 - 🛒 Carrito de compras con Context API (agregar, aumentar, disminuir y eliminar productos)
 - 💰 Total del carrito sincronizado en tiempo real con el Navbar
-- 🍕 Vista de detalle de pizza con consumo de API REST
+- 🍕 Vista de detalle de pizza con consumo de API REST y useParams
 - 🗺️ Enrutamiento con React Router DOM
-- 🔐 Formularios de Login y Registro
-- 👤 Página de perfil de usuario
+- 🔐 Rutas protegidas según estado de autenticación
+- 👤 Página de perfil solo accesible con sesión iniciada
+- 🔑 Autenticación simulada con UserContext y localStorage
 - ❌ Página 404 personalizada
 - 📦 Estructura modular y escalable (CSS por componente)
 - 🎯 UI moderna con enfoque en experiencia de usuario
@@ -46,7 +47,8 @@ src/
 ├── components/
 │   ├── Navbar.jsx / Navbar.css
 │   ├── Header.jsx / Header.css
-│   └── Footer.jsx / Footer.css
+│   ├── Footer.jsx / Footer.css
+│   └── ProtectedRoute.jsx
 │
 ├── views/
 │   ├── Home.jsx / Home.css
@@ -59,8 +61,9 @@ src/
 │   └── NotFound.jsx / NotFound.css
 │
 ├── context/
-│   └── CartContext.jsx
-│   └── PizzaContext.jsx 
+│   ├── CartContext.jsx
+│   ├── PizzaContext.jsx
+│   └── UserContext.jsx
 │
 ├── assets/
 ├── App.jsx / App.css
