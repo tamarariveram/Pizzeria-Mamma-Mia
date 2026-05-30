@@ -8,7 +8,7 @@ Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, e
 
 Puedes ver el proyecto funcionando aquí:
 
-👉 [Ver demo en producción](https://pizzeria-mamma-mia-qg7w.onrender.com/)
+👉 [Ver demo en producción](https://pizzeria-mamma-mia-ten.vercel.app/)
 
 ---
 
