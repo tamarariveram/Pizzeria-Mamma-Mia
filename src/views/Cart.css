@@ -117,3 +117,20 @@
   background-color: #aaa;
   cursor: not-allowed;
 }
+
+.cart-success {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cart-success p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.cart-success p:last-child {
+  font-size: 1rem;
+  color: #555;
+}

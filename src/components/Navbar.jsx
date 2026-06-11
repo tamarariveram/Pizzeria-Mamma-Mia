@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { UserContext } from "../context/UserContext";
@@ -7,6 +7,12 @@ import { UserContext } from "../context/UserContext";
 function Navbar() {
   const { total } = useContext(CartContext);
   const { token, logout } = useContext(UserContext); // 👈 ambos aquí
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
 
   return (
     <nav className="navbar">
@@ -23,7 +29,7 @@ function Navbar() {
             <Link to="/profile" className="navbar-btn">
               👤 Profile
             </Link>
-            <button className="navbar-btn" onClick={logout}>
+            <button className="navbar-btn" onClick={handleLogout}>
               🔐 Logout
             </button>
           </>

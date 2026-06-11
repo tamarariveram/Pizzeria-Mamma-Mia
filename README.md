@@ -1,6 +1,6 @@
 # 🍕 Pizzería Mamma Mia
 
-Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, enfocada en la construcción de componentes reutilizables, manejo de estado global con Context API, autenticación simulada y diseño responsive.
+Aplicación web desarrollada con React y Vite que simula una tienda de pizzas, con autenticación real mediante JWT, manejo de estado global con Context API, rutas protegidas y diseño responsive.
 
 ---
 
@@ -21,9 +21,11 @@ Puedes ver el proyecto funcionando aquí:
 - 💰 Total del carrito sincronizado en tiempo real con el Navbar
 - 🍕 Vista de detalle de pizza con consumo de API REST y useParams
 - 🗺️ Enrutamiento con React Router DOM
-- 🔐 Rutas protegidas según estado de autenticación
-- 👤 Página de perfil solo accesible con sesión iniciada
-- 🔑 Autenticación simulada con UserContext y localStorage
+- 🔐 Autenticación real con JWT (login y registro)
+- 🛡️ Rutas protegidas según estado de autenticación
+- 👤 Página de perfil con datos del usuario autenticado
+- 💳 Checkout con envío del carrito al backend
+- 🎉 Mensaje de éxito al completar una compra
 - ❌ Página 404 personalizada
 - 📦 Estructura modular y escalable (CSS por componente)
 - 🎯 UI moderna con enfoque en experiencia de usuario
@@ -88,6 +90,8 @@ npm install
 # Iniciar servidor de desarrollo
 npm run dev
 ```
+
+> ⚠️ Para el funcionamiento completo necesitas tener el backend corriendo en `http://localhost:5000`
 
 ---
 

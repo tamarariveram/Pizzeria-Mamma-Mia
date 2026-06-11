@@ -1,5 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 import "./RegisterForm.css";
 
 export default function RegisterForm() {
@@ -7,7 +9,10 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const handleSubmit = (e) => {
+  const { register } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password.length < 6) {
@@ -16,11 +21,18 @@ export default function RegisterForm() {
     } else if (password !== passwordConfirm) {
       alert("Las contraseñas no coinciden");
       return;
-    } else {
+    }
+
+    const data = await register(email, password);
+
+    if (data.token) {
       alert("Cuenta creada con éxito");
       setEmail("");
       setPassword("");
       setPasswordConfirm("");
+      navigate("/");
+    } else {
+      alert("Error al crear la cuenta, verifica tus datos");
     }
   };
 
